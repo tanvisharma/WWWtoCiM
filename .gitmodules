@@ -1,0 +1,6 @@
+[submodule "accelergy-timeloop-infrastructure"]
+	path = accelergy-timeloop-infrastructure
+	url = ./accelergy-timeloop-infrastructure/
+[submodule "timeloop-accelergy-exercises"]
+	path = timeloop-accelergy-exercises
+	url = ./timeloop-accelergy-exercises/

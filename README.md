@@ -15,9 +15,9 @@ and deciding the dataflow using our priority based algorithm for each CiM primit
 
 ## Contents
 This repository contains the setup for 
-1. Timeloopfe infrastructure
-2. Priority based algorithm
-3. Artifacts for re-producing the results
+1. Timeloopfe infrastructure ([accelergy-timeloop-infrastructure/](https://timeloop.csail.mit.edu/v4/installation) and [timeloop-accelergy-execises/](https://github.com/Accelergy-Project/timeloop-accelergy-exercises))
+2. Priority based algorithm (www-cim/constraints/)
+3. Data used to plot graphs in the paper (www-cim/outputs)
 
 For the paper, please visit [WWW](https://arxiv.org/abs/2312.15896).
 
