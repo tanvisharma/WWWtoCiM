@@ -1,0 +1,128 @@
+variables:
+  version: 0.4
+  X: 1
+  Y: 4
+architecture:
+  version: 0.4
+  nodes: # Top-level is hierarchical
+  - !Container # Top-level system
+    name: system
+    attributes:
+      technology: "45nm"
+      global_cycle_seconds: 1e-9
+
+  - !Component # DRAM main memory
+    name: DRAM
+    class: DRAM
+    attributes:
+      type: "LPDDR4"
+      width: 64
+      metadata_storage_width: 64
+      datawidth: 8
+      cluster_size: 1
+      read_bandwidth: 32
+      write_bandwidth: 32
+
+  - !Component # 256KB data, 32KB metadata
+    name: SMEM
+    class: storage
+    subclass: smartbuffer_metadata
+    attributes:
+      depth: 8192 
+      width: 256
+      n_banks: 2
+      n_rdwr_ports: 2
+      metadata_storage_depth: 8192
+      metadata_storage_width: 64
+      datawidth: 8
+      cluster_size: 1
+      read_bandwidth: 42
+      write_bandwidth: 42
+
+  - !Container # Subpartition
+    name: Subpartition
+    spatial: {meshY: Y, meshX: X}
+
+  - !Component # Register file
+    name: RF # Register file
+    class: storage
+    subclass: smartbuffer_RF
+    attributes:
+      # to accommodate for a dense Z with M=16 and N=128
+      depth: 4096
+      width: 8
+      n_banks: 16
+      n_rdwr_ports: 2
+      datawidth: 8
+      cluster_size: 1
+
+  - !Container # PE
+    name: PE
+    spatial: {meshX: 16, meshY: 16}
+
+  - !Component # Local register file
+    name: LRF 
+    class: storage
+    subclass: smartbuffer_metadata
+    attributes:
+      depth: 1
+      width: 8
+      metadata_storage_depth: 1  
+      metadata_storage_width: 8
+      datawidth: 8
+      cluster_size: 1 
+
+  - !Component # MAC unit
+    name: mac
+    class: intmac
+    attributes:
+      multiplier_width: 8
+      adder_width: 8
+
+constraints:
+  version: 0.4
+  targets:
+  - target: DRAM
+    type: dataspace
+    keep: [A, B, Z]
+  - target: SMEM
+    type: dataspace
+    keep: [A, B]
+    bypass: [Z]
+  - target: RF
+    type: dataspace
+    keep: [Z]
+    bypass: [A, B]
+  - target: LRF
+    type: dataspace
+    keep: [A]
+    bypass: [B, Z]
+
+  # - target: DRAM
+  #   type: temporal
+  #   permutation: [K]
+  #   factors: [K=1]
+  # - target: SMEM
+  #   type: temporal
+  #   permutation: [K]
+    # factors: [M<=784, N<=2, K=1]
+  - target: RF
+    type: temporal
+    permutation: [K, N, M]
+    factors: [M=1, N=1]
+  - target: LRF 
+    type: temporal
+    permutation: [N, K, M]
+    factors: [M=1, N<=128, K=1]
+  
+  - target: PE
+    type: spatial
+    permutation: [K, N, M]
+    split: 1
+    factors: [N=16, K=16]
+  - target: Subpartition
+    type: spatial
+    split: 0
+    permutation: [N, K, M]
+    # factors: [N<=4, K<=64, M=1]
+
