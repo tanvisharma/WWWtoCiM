@@ -1,0 +1,2 @@
+Name, Rp, Cp, Rh, Ch, Size(B), Latency, Area(x), Parallel Compute capacity
+analog8T, 64, 4, 1, 16, 4096, 144, 2.1, 256

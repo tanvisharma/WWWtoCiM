@@ -1,0 +1,10 @@
+technology,type,datawidth,action,energy,area
+45nm,zero,8,read|write|leak|update,0,1 
+45nm, analog6T,8,read|leak,0,1
+45nm,analog6T,8,write|update,1.9,1
+45nm, analog8T,8,read|leak,0,1
+45nm, analog8T,8,write|update,3,1
+45nm, digital6T,8,read|leak,0,1
+45nm, digital6T,8,write|update,3.2,1
+45nm, digital8T,8,read|leak,0,1
+45nm, digital8T,8,write|update,1.7,1
