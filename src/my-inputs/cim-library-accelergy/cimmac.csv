@@ -1,7 +1,0 @@
-technology,type,datawidth,action,energy
-45nm,analog6T,8,mac|compute|read|write|update|leak,0.15
-45nm,analog8T,8,mac|compute|read|write|update|leak,0.09
-45nm,digital6T,8,mac|compute|read|write|update|leak,0.34
-45nm,digital8T,8,mac|compute|read|write|update|leak,0.84
-
-# Have to include all the actions to make the library wrapper happy
