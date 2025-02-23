@@ -1,0 +1,129 @@
+variables:
+  version: 0.4
+  Cp: 4
+  Rp: 64
+  Ch: 16
+  Rh: 1
+
+architecture:
+  version: 0.4
+  nodes: # Top-level is hierarchical
+  - !Container # Top-level system
+    name: system
+    attributes:
+      technology: "45nm"
+      global_cycle_seconds: 1e-9
+
+  - !Component # DRAM main memory
+    name: DRAM
+    class: DRAM
+    attributes:
+      type: "LPDDR4"
+      width: 64
+      metadata_storage_width: 64
+      datawidth: 8
+      cluster_size: 1
+      read_bandwidth: 32
+      write_bandwidth: 32
+    constraints:
+      # temporal: {permutation: [M, K, N], factors: K=1 N=1 M=32}
+      temporal: {permutation: [M, K, N]}
+
+  - !Component # 256KB data, 32KB metadata
+    name: SMEM
+    class: storage
+    subclass: smartbuffer_metadata
+    attributes:
+      depth: 8192 
+      width: 256
+      n_banks: 2
+      n_rdwr_ports: 2
+      metadata_storage_depth: 8192
+      metadata_storage_width: 64
+      datawidth: 8
+      cluster_size: 1
+      read_bandwidth: 42
+      write_bandwidth: 42
+    constraints:
+      temporal: {permutation: [M, K, N]}
+      # temporal: {permutation: [M, K, N], factors: K=1 M=2 N=1}
+      dataspace: {keep: [A, Z]}
+
+  - !Container # 1 CiM Bank
+    name: CiMBank
+    spatial: {meshX: 2, meshY: 2}
+    # constraints:
+      # spatial: {factors: M=1 K=1 N=2}
+
+  # - !Component
+  #   name: CimAdder
+  #   class: cim_storage
+  #   attributes:
+  #     technology: 45nm
+
+
+
+  - !Container # 1 CiM Array
+    name: CiMArray
+    spatial: {meshX: Cp, meshY: Rp}
+    constraints:
+      spatial: {permutation: [N, K, M], factors: N<=4 K<=64 M=1, split: 1}
+      # temporal: {permutation: [M, N, K], factors: K=1 N=1}
+
+      # map K in X dim, map N in Y dim
+      # need to keep the weight stationary while the M dimension changes
+      # temporal reduction cost should be factored with Rp to reflect no cost of reduction upto Rp
+      # spatial reduction cost is also zero because SnA included in CiM energy
+    
+  - !Parallel # 1 CiM unit
+    nodes:
+    - !Component
+      name: CiMInpBuffer
+      class: storage
+      subclass: regfile
+      # subclass: #dummy so that energy to read from inp buffer is zero
+      attributes:
+        datawidth: 8
+        width: 8
+        depth:  Rh
+        technology: -1
+      constraints:
+        temporal: {factors: M=1 N=1 K=1} #K<=Rh
+        dataspace: {keep_only: [A]}
+    - !Component
+      name: CiMOutBuffer
+      class: storage
+      subclass: regfile
+      # subclass: #dummy so that energy to write to this buffer and spatially reduce is zero
+      attributes:
+        datawidth: 8
+        width: 8
+        depth: Ch
+        technology: -1
+      constraints:
+        temporal: {factors: M=1 K=1 N=1} #N<=Ch
+        dataspace: {keep_only: [Z]}
+    - !Component
+      name: CiMStorage
+      class: storage
+      subclass: regfile
+      # subclass: #energy to read from this buffer is zero, but writing is non-zero
+      attributes:
+        datawidth: 8
+        width: Ch*8
+        depth: Rh
+        technology: -1
+      constraints:
+        temporal: {permutation: [M, N, K], factors: M=1 K=1 N<=16} #TODO: this should be automated
+        dataspace: {keep_only: [B]} #only the weights
+
+  - !Component
+    name: CiMUnit
+    class: compute
+    subclass: cimmac_unit
+    attributes:
+        technology: 'cim-analog1'
+        datawidth: 8
+        sequential_X: Ch
+        sequential_Y: Rh
+        

@@ -1,0 +1,2 @@
+Name, Rp, Cp, Rh, Ch, Size(B), Latency, Area(x), Parallel Compute capacity
+digital6T, 256, 16, 1, 1, 4096, 18, 1.4, 4096  #updated from 32 to 16 to match the size of other CiM primitives

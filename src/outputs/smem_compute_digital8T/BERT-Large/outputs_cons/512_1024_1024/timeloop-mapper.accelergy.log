@@ -1,0 +1,501 @@
+2024-05-03 18:14:50 INFO            _                _                      
+2024-05-03 18:14:50 INFO           / \   ___ ___ ___| | ___ _ __ __ _ _   _ 
+2024-05-03 18:14:50 INFO          / _ \ / __/ __/ _ \ |/ _ \ '__/ _` | | | |
+2024-05-03 18:14:50 INFO         / ___ \ (_| (_|  __/ |  __/ | | (_| | |_| |
+2024-05-03 18:14:50 INFO        /_/   \_\___\___\___|_|\___|_|  \__, |\__, |
+2024-05-03 18:14:50 INFO                                        |___/ |___/ 
+2024-05-03 18:14:50 INFO        generating outputs according to the following specified output flags... 
+2024-05-03 18:14:50 INFO         Please use the -f flag to update the preference (default to all output files)
+2024-05-03 18:14:50 INFO        {'ERT': 1, 'ERT_summary': 1, 'ART': 1, 'ART_summary': 1, 'energy_estimation': 1, 'flattened_arch': 1}
+2024-05-03 18:14:50 INFO        Located config file at /home/min/a/sharm418/.config/accelergy/accelergy_config.yaml.
+2024-05-03 18:14:50 INFO        config file located:
+2024-05-03 18:14:50 INFO        /home/min/a/sharm418/.config/accelergy/accelergy_config.yaml
+2024-05-03 18:14:50 INFO        Parsing file /home/nano01/a/sharm418/timeloopfe/www-cim/outputs/smem_compute_digital8T/BERT-Large/outputs_cons/512_1024_1024/parsed-processed-input.yaml for architecture info
+2024-05-03 18:14:50 INFO        Parsing file /home/nano01/a/sharm418/timeloopfe/www-cim/outputs/smem_compute_digital8T/BERT-Large/outputs_cons/512_1024_1024/parsed-processed-input.yaml for compound_components info
+2024-05-03 18:14:50 INFO        Adding required action "leak" to class DRAM
+2024-05-03 18:14:50 INFO        Adding required action "read" to class DRAM
+2024-05-03 18:14:50 INFO        Adding required action "write" to class DRAM
+2024-05-03 18:14:50 INFO        Adding required action "update" to class DRAM
+2024-05-03 18:14:50 INFO        Calculated custom_memory."technology" as "technology" = 45nm.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."datawidth" as "datawidth" = 8.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."type" as "type" = zero.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."technology" as "technology" = 45nm.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."datawidth" as "datawidth" = 8.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."type" as "type" = zero.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."technology" as "technology" = 45nm.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."datawidth" as "datawidth" = 8.
+2024-05-03 18:14:50 INFO        Calculated custom_memory."type" as "type" = digital8T.
+2024-05-03 18:14:50 INFO        Calculated arithmetic."datawidth" as "datawidth" = 8.
+2024-05-03 18:14:50 INFO        Calculated arithmetic."technology" as "technology" = 45nm.
+2024-05-03 18:14:50 INFO        Calculated arithmetic."type" as "type" = digital8T.
+2024-05-03 18:14:50 INFO        Estimator plug-in identified by: /home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/table.estimator.yaml
+2024-05-03 18:14:50 INFO        Estimator plug-in identified by: /home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/accelergy-neurosim-plugin/neurosim.estimator.yaml
+2024-05-03 18:14:50 INFO        Estimator plug-in identified by: /home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin.estimator.yaml
+2024-05-03 18:14:50 INFO        Estimator plug-in identified by: /home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/accelergy-adc-plug-in/adc.estimator.yaml
+2024-05-03 18:14:50 INFO        Estimator plug-in identified by: /home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml
+2024-05-03 18:14:50 INFO        Estimator plug-in identified by: /home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/dummy_tables/dummy.estimator.yaml
+2024-05-03 18:14:50 INFO        Estimator plug-in identified by: /home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/accelergy-library-plugin/library.estimator.yaml
+2024-05-03 18:14:50 INFO        Getting all estimators in module <module 'python_plug_in' from '/home/min/a/sharm418/anaconda3/envs/timeloopfe/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_wrapper.py'>
+2024-05-03 18:14:50 INFO        Added estimator CactiCache that estimates cache with actions idle, read, read_access, update, update_access, write, write_access, leak
+2024-05-03 18:14:50 INFO        Added estimator CactiDRAM that estimates ['DRAM', 'dram'] with actions idle, read, update, write, leak
+2024-05-03 18:14:50 INFO        Added estimator CactiSRAM that estimates ['SRAM', 'sram'] with actions idle, read, update, write, leak
+2024-05-03 18:14:50 INFO        Found estimator plug-in: table-based-plug-ins (<SetsOfTables.SetsOfTables object at 0x7febb6a8d6d0>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: Neurosim Plug-In (<NeuroWrapper.NeuroWrapper object at 0x7febb6aa4fb0>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: Aladdin_table (<AladdinTable.AladdinTable object at 0x7febb6c71b20>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: ADC Plug-In (<ADCEstimator.ADCEstimator object at 0x7febb69f02c0>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: dummy_table (<DummyTable.DummyTable object at 0x7febb69f2e70>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: Library (<LibraryEstimator.LibraryEstimator object at 0x7febb6c70110>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: CactiCache (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7febb6c4b140>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: CactiDRAM (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7febb6b05040>)
+2024-05-03 18:14:50 INFO        Found estimator plug-in: CactiSRAM (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7febb6c4aab0>)
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, metadata_storage_width=64, datawidth=8, cluster_size=1, read_bandwidth=32, write_bandwidth=32, has_power_gating=False, n_banks=2, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, technology=45nm, global_cycle_seconds=1e-09, version=0.4, cimtype=digital8T, Cp=128, Rp=1, Ch=1, Rh=10, X=1, Y=4, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).leak(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-05-03 18:14:50 INFO        CactiDRAM estimated 0 with accuracy 80%. Messages:
+2024-05-03 18:14:50 INFO        | Unused arguments (metadata_storage_width, datawidth, cluster_size, read_bandwidth, write_bandwidth, has_power_gating, n_banks, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, technology, global_cycle_seconds, version, cimtype, Cp, Rp, Ch, Rh, X, Y, action_latency_cycles, cycle_seconds, n_instances) provided for ['DRAM', 'dram'].__init__. Arguments used: (type, width)
+2024-05-03 18:14:50 INFO        | Unused arguments (action_latency_cycles) provided for ['DRAM', 'dram'].leak. Arguments used: (global_cycle_seconds)
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, metadata_storage_width=64, datawidth=8, cluster_size=1, read_bandwidth=32, write_bandwidth=32, has_power_gating=False, n_banks=2, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, technology=45nm, global_cycle_seconds=1e-09, version=0.4, cimtype=digital8T, Cp=128, Rp=1, Ch=1, Rh=10, X=1, Y=4, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).read(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-05-03 18:14:50 INFO        CactiDRAM estimated 5.12e-10 with accuracy 80%. Messages:
+2024-05-03 18:14:50 INFO        | Unused arguments (metadata_storage_width, datawidth, cluster_size, read_bandwidth, write_bandwidth, has_power_gating, n_banks, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, technology, global_cycle_seconds, version, cimtype, Cp, Rp, Ch, Rh, X, Y, action_latency_cycles, cycle_seconds, n_instances) provided for ['DRAM', 'dram'].__init__. Arguments used: (type, width)
+2024-05-03 18:14:50 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for ['DRAM', 'dram'].read. Arguments used: ()
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, metadata_storage_width=64, datawidth=8, cluster_size=1, read_bandwidth=32, write_bandwidth=32, has_power_gating=False, n_banks=2, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, technology=45nm, global_cycle_seconds=1e-09, version=0.4, cimtype=digital8T, Cp=128, Rp=1, Ch=1, Rh=10, X=1, Y=4, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).write(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-05-03 18:14:50 INFO        CactiDRAM estimated 5.12e-10 with accuracy 80%. Messages:
+2024-05-03 18:14:50 INFO        | Unused arguments (metadata_storage_width, datawidth, cluster_size, read_bandwidth, write_bandwidth, has_power_gating, n_banks, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, technology, global_cycle_seconds, version, cimtype, Cp, Rp, Ch, Rh, X, Y, action_latency_cycles, cycle_seconds, n_instances) provided for ['DRAM', 'dram'].__init__. Arguments used: (type, width)
+2024-05-03 18:14:50 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for ['DRAM', 'dram'].write. Arguments used: ()
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, metadata_storage_width=64, datawidth=8, cluster_size=1, read_bandwidth=32, write_bandwidth=32, has_power_gating=False, n_banks=2, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, technology=45nm, global_cycle_seconds=1e-09, version=0.4, cimtype=digital8T, Cp=128, Rp=1, Ch=1, Rh=10, X=1, Y=4, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).update(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-05-03 18:14:50 INFO        CactiDRAM estimated 5.12e-10 with accuracy 80%. Messages:
+2024-05-03 18:14:50 INFO        | Unused arguments (metadata_storage_width, datawidth, cluster_size, read_bandwidth, write_bandwidth, has_power_gating, n_banks, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, technology, global_cycle_seconds, version, cimtype, Cp, Rp, Ch, Rh, X, Y, action_latency_cycles, cycle_seconds, n_instances) provided for ['DRAM', 'dram'].__init__. Arguments used: (type, width)
+2024-05-03 18:14:50 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for ['DRAM', 'dram'].update. Arguments used: ()
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).read(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.read.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).write(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.write.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'write', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'write', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'write', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).update(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.update.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'update', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'update', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'update', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).leak(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.leak.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage leak has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage leak has been scaled 1x
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).read(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.read.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).write(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.write.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'write', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'write', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'write', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).update(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.update.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'update', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'update', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'update', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).leak(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.leak.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage leak has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage leak has been scaled 1x
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=digital8T, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).read(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.read.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=digital8T, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).write(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 1.7p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.write.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'write', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'write', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'write', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.7, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=digital8T, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).update(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 1.7p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.update.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'update', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'update', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'update', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.7, matching_attrs=4, log=['cimstorage energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage energy has been scaled 1x
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=digital8T, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).leak(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.0p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 5 entries for cimstorage.leak.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.0, matching_attrs=4, log=['cimstorage leak has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage leak has been scaled 1x
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        ENERGY ESTIMATION for cimmac(datawidth=8, technology=45nm, type=digital8T, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).mac(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 0.84p with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 4 entries for cimmac.mac.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'mac', 'energy': '0.15', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'mac', 'energy': '0.09', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'mac', 'energy': '0.34', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'mac', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=0.84, matching_attrs=4, log=['cimmac energy has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'mac', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimmac energy has been scaled 1x
+2024-05-03 18:14:50 WARNING     No action counts are specified as yaml input
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        AREA ESTIMATION for DRAM(type=LPDDR4, width=64, metadata_storage_width=64, datawidth=8, cluster_size=1, read_bandwidth=32, write_bandwidth=32, has_power_gating=False, n_banks=2, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, technology=45nm, global_cycle_seconds=1e-09, version=0.4, cimtype=digital8T, Cp=128, Rp=1, Ch=1, Rh=10, X=1, Y=4, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-05-03 18:14:50 INFO        CactiDRAM estimated 0 with accuracy 80%. Messages:
+2024-05-03 18:14:50 INFO        | Unused arguments (metadata_storage_width, datawidth, cluster_size, read_bandwidth, write_bandwidth, has_power_gating, n_banks, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, technology, global_cycle_seconds, version, cimtype, Cp, Rp, Ch, Rh, X, Y, action_latency_cycles, cycle_seconds, n_instances) provided for ['DRAM', 'dram'].__init__. Arguments used: (type, width)
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        AREA ESTIMATION for dummy_storage(width=1, depth=1, datawidth=1, technology=-1, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, global_cycle_seconds=1e-09, version=0.4, cimtype=digital8T, Cp=128, Rp=1, Ch=1, Rh=10, X=1, Y=4, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-05-03 18:14:50 INFO        dummy_table estimated 1u^2 with accuracy 100%. Messages:
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        AREA ESTIMATION for dummy_storage(width=1, depth=1, datawidth=1, technology=-1, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=4, global_cycle_seconds=1e-09, version=0.4, cimtype=digital8T, Cp=128, Rp=1, Ch=1, Rh=10, X=1, Y=4, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-05-03 18:14:50 INFO        dummy_table estimated 1u^2 with accuracy 100%. Messages:
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        AREA ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 1.0u^2 with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 20 entries for cimstorage.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'write', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'update', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'write', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'update', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'write', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'update', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage area has been scaled 1x
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        AREA ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=zero, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 1.0u^2 with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 20 entries for cimstorage.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'write', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'update', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'write', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'update', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'write', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'update', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage area has been scaled 1x
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        AREA ESTIMATION for cimstorage(technology=45nm, datawidth=8, type=digital8T, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 1.0u^2 with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 20 entries for cimstorage.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'write', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'zero', 'datawidth': '8', 'action': 'update', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Could not parse "zero" from "cimstorage.type" as a float.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'write', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'update', 'energy': '1.9', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'write', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'update', 'energy': '3', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'write', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'update', 'energy': '3.2', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimstorage: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '1.7', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimstorage area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0', 'area': '1', 'name': 'cimstorage', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimstorage area has been scaled 1x
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        
+2024-05-03 18:14:50 INFO        AREA ESTIMATION for cimmac(datawidth=8, technology=45nm, type=digital8T, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-05-03 18:14:50 INFO        Library estimated 1.0u^2 with accuracy 90%. Messages:
+2024-05-03 18:14:50 INFO        | Found 24 entries for cimmac.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'mac', 'energy': '0.15', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'compute', 'energy': '0.15', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'read', 'energy': '0.15', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'write', 'energy': '0.15', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'update', 'energy': '0.15', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog6T', 'datawidth': '8', 'action': 'leak', 'energy': '0.15', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'mac', 'energy': '0.09', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'compute', 'energy': '0.09', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'read', 'energy': '0.09', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'write', 'energy': '0.09', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'update', 'energy': '0.09', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'analog8T', 'datawidth': '8', 'action': 'leak', 'energy': '0.09', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'mac', 'energy': '0.34', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'compute', 'energy': '0.34', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'read', 'energy': '0.34', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'write', 'energy': '0.34', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'update', 'energy': '0.34', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital6T', 'datawidth': '8', 'action': 'leak', 'energy': '0.34', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | Failed to scale cimmac: Scaling of paramter type not supported.
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'mac', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimmac area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'compute', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimmac area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'read', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimmac area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'write', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimmac area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'update', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimmac area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Checking entry "{'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'leak', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | value=1.0, matching_attrs=4, log=['cimmac area has been scaled 1x']
+2024-05-03 18:14:50 INFO        | Best-matching entry: {'technology': '45nm', 'type': 'digital8T', 'datawidth': '8', 'action': 'mac', 'energy': '0.84', 'name': 'cimmac', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-05-03 18:14:50 INFO        | cimmac area has been scaled 1x
+2024-05-03 18:14:50 INFO        | Multiplying by n_instances 1
+2024-05-03 18:14:50 INFO        flattened architecture is saved to:
+2024-05-03 18:14:50 INFO        ./timeloop-mapper.flattened_architecture.yaml
+2024-05-03 18:14:50 INFO        energy reference table is saved to:
+2024-05-03 18:14:50 INFO        ./timeloop-mapper.ERT.yaml
+2024-05-03 18:14:50 INFO        energy reference table summary is saved to:
+2024-05-03 18:14:50 INFO        ./timeloop-mapper.ERT_summary.yaml
+2024-05-03 18:14:50 WARNING     no runtime energy estimations are generated... not generating energy_estimation.yaml
+2024-05-03 18:14:50 INFO        area reference table is saved to:
+2024-05-03 18:14:50 INFO        ./timeloop-mapper.ART.yaml
+2024-05-03 18:14:50 INFO        area reference table summary is saved to:
+2024-05-03 18:14:50 INFO        ./timeloop-mapper.ART_summary.yaml

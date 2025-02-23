@@ -1,0 +1,58 @@
+compound_components:
+  version: 0.4         # REQUIRED version number
+  classes:
+
+  - name: cimmac_unit
+    attributes:
+      technology: "must_specify"
+      datawidth: "must_specify" #8bit by default
+      type: "must_specify"
+
+    subcomponents:
+    - name: arithmetic
+      class: cimmac
+      attributes: {datawidth: datawidth, technology: technology, type: type}
+
+    actions:
+    - name: compute
+      subcomponents:
+      - name: arithmetic
+        actions: [{name: mac}]
+
+        # add read, write , update memory actions
+
+
+  - name: custom_storage
+    attributes:
+      technology: "must_specify"
+      type: "must_specify"
+      datawidth: "must_specify" #8bit by default
+      depth: "must_specify" # storage size X
+      width: "must_specify" # storage size Y
+
+
+    subcomponents:
+    - name: custom_memory
+      class: cimstorage
+      attributes: {technology: technology, datawidth: datawidth, type: type}
+
+    actions:
+    - name: read
+      subcomponents:
+      - name: custom_memory
+        actions: [{name: read}]
+
+    - name: write
+      subcomponents:
+      - name: custom_memory
+        actions: [{name: write}]
+
+    - name: update
+      subcomponents:
+      - name: custom_memory
+        actions: [{name: update}]
+
+    - name: leak
+      subcomponents:
+      - name: custom_memory
+        actions: [{name: leak}]

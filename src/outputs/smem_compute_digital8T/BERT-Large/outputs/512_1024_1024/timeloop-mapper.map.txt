@@ -1,0 +1,17 @@
+DRAM [ A:524288 (524288) B:1048576 (1048576) Z:524288 (524288) ] 
+----------------------------------------------------------------
+| for N in [0:16)
+|   for K in [0:512)
+|     for M in [0:512)
+
+inter_CiMBank_spatial [ ] 
+inter_CiMArray_spatial [ ] 
+--------------------------
+|       for N in [0:64) (Spatial-X)
+
+CiMInpBuffer [ A:2 (2) ] 
+CiMOutBuffer [ Z:1 (1) ] 
+CiMStorage [ B:2 (2) ] 
+----------------------
+|         for K in [0:2)
+|           << Compute >>
