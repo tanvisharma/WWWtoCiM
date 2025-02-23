@@ -21,6 +21,3 @@ This repository contains the setup for
 
 For the paper, please visit [WWW](https://arxiv.org/abs/2312.15896).
 
-## Validation
-TBD
-
